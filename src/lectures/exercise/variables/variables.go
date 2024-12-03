@@ -25,5 +25,24 @@ package main
 import "fmt"
 
 func main() {
+	// using var and assuming type
+	var favouriteColour = "Blue"
+	fmt.Println("My favourite colour is", favouriteColour)
+	// compound assignment
+	birthYear, ageInYears := 1999, 25
+	// fmt.Println("My birth year is", birthYear)
+	// fmt.Println("My age in years is", ageInYears)
+	fmt.Println("My birth year is", birthYear, "and my age in years is", ageInYears)
+	// block assignment
+	var (
+		firstInitial = "L"
+		lastInitial = "B"
+	)
+	fmt.Println("My initials:", firstInitial, lastInitial)
+	var ageInDays int
+	ageInDays = ageInYears * 365
+	fmt.Println("My age in days is", ageInDays)
+
+
 }
 
