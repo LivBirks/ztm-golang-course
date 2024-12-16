@@ -23,8 +23,26 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
+
+func rollDice(numSides int) int {
+    // Roll the dice and return the sum of the dice
+    sumOfDice := rand.Intn(numSides) + 1
+    return sumOfDice
+}
 
 func main() {
+    // Ask user for number of dice, number of rolls, and number of sides
+    var numDice, numRolls, numSides int
+    fmt.Print("Enter number of dice: ")
+    fmt.Scan(&numDice)
+    fmt.Print("Enter number of rolls: ")
+    fmt.Scan(&numRolls)
+    fmt.Print("Enter number of sides: ")
+    fmt.Scan(&numSides)
+
 }
 

@@ -15,5 +15,16 @@ package main
 import "fmt"
 
 func main() {
+	for i := 1; i <= 50; i++ {
+		factor3 := i % 3 == 0
+		factor5 := i % 5 == 0
+		if factor3 && factor5 {
+			fmt.Println("FizzBuzz")
+		} else if factor3 {
+			fmt.Println("Fizz")
+		} else if factor5 {
+			fmt.Println("Buzz")
+		}
+	}
 }
 
