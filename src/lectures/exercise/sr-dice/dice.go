@@ -44,5 +44,28 @@ func main() {
     fmt.Print("Enter number of sides: ")
     fmt.Scan(&numSides)
 
+    numRolls *= numDice
+
+    // Roll the dice and print the sum of the dice
+    for i := 0; i < numRolls; i++ {
+        sumOfDice := rollDice(numSides)
+        fmt.Println("Roll", i+1, ":", sumOfDice)
+
+        // Print additional information based on the sum of the dice
+        if numDice == 2 && sumOfDice == 2 {
+            fmt.Println("Snake eyes")
+        }
+        if sumOfDice == 7 {
+            fmt.Println("Lucky 7")
+        }
+        if sumOfDice%2 == 0 {
+            fmt.Println("Even")
+        } else {
+            fmt.Println("Odd")
+        }
+    }
+
+
+
 }
 
